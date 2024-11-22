@@ -57,7 +57,7 @@ jobs:
 
       - name: Initialize Terraform for the selected module
         working-directory: modules/${{ github.event.inputs.module }}
-        run: terraform init -backend-config="../../environments/${{ github.event.inputs.environment }}/backend.tfvars"
+        run: terraform init -backend-config="../../environments/${{ github.event.inputs.environment }}/terraform.tfvars"
 
       - name: Terraform Action
         working-directory: modules/${{ github.event.inputs.module }}
